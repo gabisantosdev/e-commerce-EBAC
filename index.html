@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce - EBAC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <section class="principal-info">
+                <h1 class="principal-title">Seja Bem-Vindo(a) ao ecommerce</h1>
+                <p class="principal-subtitle">Encontre aqui seu pedido</p>
+                <a href="#products" class="button-buy-now">Compre agora</a>
+            </section>
+            <section id="products">
+                <h2 class="products-title">Produto em destaque</h2>
+                <!--Lista de produtos gerados dinamicamente-->
+                <div id="productsList"></div>
+            </section>
+            <section id="cart">
+                <h3 class="cart-title">Carrinho de compras</h3>
+                <table id="cartList">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>ID</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <!--Renderizado via JavaScript-->
+                    <tbody></tbody>
+                </table>
+                <span class="total-price-name">Preço total: <span id="totalPrice"></span></span>
+                <button title="buttonPay" id="buttonPay">Pagar</button>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;2024 - Desenvolvido por NegsCoding</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

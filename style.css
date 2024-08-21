@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 62.5%;
+}
+
+:root {
+    --colorPrimary: black;
+    --colorSecundary: orange;
+    --textColor: white;
+}
+
+body {
+    background-color: var(--colorPrimary);
+    color: var(--textColor);
+}
+
+nav {
+    background-color: var(--colorSecundary);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    padding: 2rem 0;
+}
+
+.menu a {
+    color: var(--colorPrimary);
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.menu a:hover {
+    color: var(--textColor);
+    transition: color 250ms ease;
+}
+
+.container {
+    padding: 2rem 0.5rem;
+}
+
+.principal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.principal-title {
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.principal-subtitle {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 70%);
+}
+
+.button-buy-now, .product button, #buttonPay {
+    padding: 1rem 2rem;
+    background-color: var(--colorSecundary);
+    color: var(--colorPrimary);
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.button-buy-now:hover, .product button:hover, #buttonPay:hover {
+    background-color: var(--textColor);
+    color: var(--colorSecundary);
+    transition: background-color 250ms ease, color 250ms ease;
+}
+
+#products {
+    padding: 6rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.products-title, .cart-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+#productsList {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 6rem;
+}
+
+.product img {
+    width: 350px;
+    border-radius: 1rem;
+}
+
+.product img:hover {
+    transform: scale(1.01);
+    transition: transform 250ms ease;
+    overflow: hidden;
+}
+
+.product h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.product p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--colorSecundary);
+}
+
+#cart {
+    padding: 6rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#cart #totalPrice, .total-price-name {
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--colorSecundary);
+}
+
+.total-price-name {
+    color: var(--textColor);
+}
+
+#cartList {
+    border-collapse: collapse;
+    border: 1px solid var(--colorSecundary);
+    margin-top: 4rem;
+}
+
+#cartList th, #cartList td {
+    padding: 1rem 2rem;
+}
+
+#cartList th {
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--colorSecundary);
+    text-align: center;
+}
+
+#cartList td {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--textColor);
+}
+
+footer {
+    background-color: var(--colorSecundary);
+    padding: 1rem 0;
+    margin-top: 4rem;
+}
+
+footer p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--colorPrimary);
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    #productsList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media  screen and (min-width: 1024px) {
+    #productsList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
